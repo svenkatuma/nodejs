@@ -1,0 +1,11 @@
+npm install express
+npm install mongoose
+npm install cors
+npm install dotenv
+npm install bcryptjs
+
+//Add the below line to eslint.config.js
+//to resolve process not defined error
+"env": {
+"node": true,
+},
