@@ -1,10 +1,11 @@
+import serverless from "serverless-http";
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import authRouter from "./routes/auth.js";
 
 var app = express();
-const PORT = 3000;
+// const PORT = 3000;
 
 // No one allowed if cors() not called in the middleware
 // Only orgin 5173 allowed
@@ -106,3 +107,5 @@ app.listen(PORT,()=>{
     // console.log("Server listening on port# "+PORT);
     console.log(`Server listening on port# ${PORT}`);
 })
+
+export const handler = serverless(app); 
